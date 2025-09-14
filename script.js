@@ -1,29 +1,5 @@
 // Modal functionality
-function openModal(type) {
-    const modal = document.getElementById('modal');
-    const modalBody = document.getElementById('modal-body');
 
-    let content = '';
-
-    switch (type) {
-        case 'register':
-            content = `
-                <h2>Exam Registration</h2>
-                <p>You will be redirected to the official SAKSHAM registration portal.</p>
-                <p><strong>Exam Date:</strong> October 25, 2025</p>
-                <p><strong>Important:</strong> Use the same email ID that you used for course enrollment.</p>
-                <button onclick="closeModal()" style="background-color: #0984e3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px;">Continue to Registration</button>
-            `;
-            break;
-    }
-
-    modalBody.innerHTML = content;
-    modal.style.display = 'block';
-}
-
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-}
 
 // Navigation functionality
 function showSection(section) {
@@ -84,31 +60,8 @@ function populateCourseModules() {
     }
 }
 
-function showInfo(type) {
-    if (type === 'nptel') {
-        alert('SAKSHAM courses are online courses offered by IITs and IISc. They include video lectures, assignments, and certification exams.');
-    }
-}
 
-function showExamCities() {
-    const cities = [
-        'Mumbai', 'Delhi', 'Bangalore', 'Chennai', 'Kolkata',
-        'Hyderabad', 'Pune', 'Ahmedabad', 'Jaipur', 'Lucknow',
-        'Bhopal', 'Thiruvananthapuram', 'Guwahati', 'Bhubaneswar'
-    ];
 
-    const modal = document.getElementById('modal');
-    const modalBody = document.getElementById('modal-body');
-
-    let content = '<h2>Available Exam Cities</h2><ul style="text-align: left; max-height: 300px; overflow-y: auto;">';
-    cities.forEach(city => {
-        content += `<li style="padding: 5px 0;">${city}</li>`;
-    });
-    content += '</ul>';
-
-    modalBody.innerHTML = content;
-    modal.style.display = 'block';
-}
 
 // Close modal when clicking outside
 window.onclick = function(event) {
@@ -160,8 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Quiz Data Structure
 const quizData = {
-    1: [
-        {
+    1: [{
             question: "A 'hazard' is best defined as:",
             options: ["The complete breakdown of a community's social functions.", "The probability that a damaging event will occur.", "A potentially damaging physical event, phenomenon, or human activity.", "The susceptibility of a community to damaging forces."],
             answer: "A potentially damaging physical event, phenomenon, or human activity."
@@ -212,8 +164,7 @@ const quizData = {
             answer: "Emergency"
         }
     ],
-    2: [
-        {
+    2: [{
             question: "The Disaster Management Cycle is best understood as:",
             options: ["A rigid, linear sequence of actions that must be followed in order.", "A continuous and integrated process for managing all stages of a disaster.", "A framework that focuses only on post-disaster relief activities.", "A model used exclusively by international response teams."],
             answer: "A continuous and integrated process for managing all stages of a disaster."
@@ -264,8 +215,7 @@ const quizData = {
             answer: "Meeting immediate, life-saving needs to addressing long-term rebuilding and restoration."
         }
     ],
-    3: [
-        {
+    3: [{
             question: "What is the primary purpose of conducting a Hazard, Vulnerability, and Risk Assessment (HVRA)?",
             options: ["To allocate blame after a disaster has occurred.", "To identify potential threats and understand their potential impact in order to prioritize action.", "To document the history of past disasters for academic purposes.", "To secure funding from international donors."],
             answer: "To identify potential threats and understand their potential impact in order to prioritize action."
@@ -316,8 +266,7 @@ const quizData = {
             answer: "Large-scale mapping of hazard-prone areas and rapid damage assessment."
         }
     ],
-    4: [
-        {
+    4: [{
             question: "'Structural Mitigation' refers to:",
             options: ["Any physical construction or measure to reduce the possible impacts of hazards.", "Changes in laws and official procedures.", "Public awareness campaigns and training programs.", "The organizational chart of a disaster management authority."],
             answer: "Any physical construction or measure to reduce the possible impacts of hazards."
@@ -368,8 +317,7 @@ const quizData = {
             answer: "Non-structural mitigation"
         }
     ],
-    5: [
-        {
+    5: [{
             question: "The primary goal of Disaster Preparedness is to:",
             options: ["Prevent any natural hazard from occurring.", "Ensure that resources and procedures are in place for an effective response when a disaster strikes.", "Rebuild the community after a disaster has occurred.", "Analyze the causes of past disasters."],
             answer: "Ensure that resources and procedures are in place for an effective response when a disaster strikes."
@@ -420,8 +368,7 @@ const quizData = {
             answer: "Outlines the roles, responsibilities, and standard operating procedures for managing a disaster."
         }
     ],
-    6: [
-        {
+    6: [{
             question: "The \"Golden Hours\" in disaster response typically refer to:",
             options: ["The time when media coverage is at its peak.", "The first 72 hours after a disaster, which are considered most critical for finding survivors.", "The daily briefings held at the Emergency Operations Center.", "The period when international aid is most generous."],
             answer: "The first 72 hours after a disaster, which are considered most critical for finding survivors."
@@ -472,8 +419,7 @@ const quizData = {
             answer: "Response"
         }
     ],
-    7: [
-        {
+    7: [{
             question: "The main difference between a Rapid Needs Assessment (RNA) and a Detailed Assessment is:",
             options: ["The RNA is done after recovery is complete, while the detailed one is done during the response.", "The RNA is quick and provides a general overview for immediate relief, while the detailed one is comprehensive and informs long-term recovery.", "The RNA is performed by international teams, while the detailed one is done by local officials.", "The RNA focuses only on infrastructure, while the detailed one focuses only on people."],
             answer: "The RNA is quick and provides a general overview for immediate relief, while the detailed one is comprehensive and informs long-term recovery."
@@ -524,8 +470,7 @@ const quizData = {
             answer: "Ensuring the inclusion of marginalized groups (women, disabled, lower castes) whose needs may be overlooked."
         }
     ],
-    8: [
-        {
+    8: [{
             question: "The recovery phase is best described as a:",
             options: ["Short-term process of providing emergency food and water.", "Long-term process of restoring and improving a community's social, economic, and physical well-being.", "Phase focused on issuing early warnings.", "Legal process of declaring a state of emergency."],
             answer: "Long-term process of restoring and improving a community's social, economic, and physical well-being."
@@ -576,8 +521,7 @@ const quizData = {
             answer: "The needs of the present are met without compromising the ability of future generations to meet their own needs."
         }
     ],
-    9: [
-        {
+    9: [{
             question: "The entire legal and institutional framework for disaster management in India is built upon the:",
             options: ["Environment (Protection) Act, 1860", "The Indian Penal Code, 1860", "The Disaster Management Act, 2005", "The Right to Information Act, 2005"],
             answer: "The Disaster Management Act, 2005"
@@ -628,8 +572,7 @@ const quizData = {
             answer: "A punishable offense"
         }
     ],
-    10: [
-        {
+    10: [{
             question: "The core principle of Community-Based Disaster Management (CBDM) is that:",
             options: ["The community is a passive victim and should always wait for external help.", "The community is the first responder and should be central to managing its own risk.", "Disaster management is too complex for local communities to understand.", "Only professionally trained experts should be involved in disaster management."],
             answer: "The community is the first responder and should be central to managing its own risk."
@@ -680,8 +623,7 @@ const quizData = {
             answer: "The affected community is actively involved in identifying and analyzing its own risks and capacities."
         }
     ],
-    11: [
-        {
+    11: [{
             question: "The impact of global climate change on disasters is primarily seen through:",
             options: ["A decrease in the number of natural hazards.", "An increase in the frequency and intensity of hydro-meteorological hazards like cyclones, floods, and heatwaves.", "The complete elimination of geophysical hazards like earthquakes.", "Making all disasters perfectly predictable."],
             answer: "An increase in the frequency and intensity of hydro-meteorological hazards like cyclones, floods, and heatwaves."
@@ -765,7 +707,7 @@ function startQuiz() {
         alert('Please select a valid module.');
         return;
     }
-    
+    document.getElementById('about-section').style.display = 'none';
     quizSection.style.display = 'block';
     document.getElementById('module-selection').style.display = 'none';
     quizDisplay.style.display = 'block';
