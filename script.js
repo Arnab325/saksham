@@ -15,7 +15,6 @@ function openModal(type) {
                 <button onclick="closeModal()" style="background-color: #0984e3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px;">Continue to Registration</button>
             `;
             break;
-        // Removed the 'payment' case as the button has been removed.
     }
 
     modalBody.innerHTML = content;
@@ -25,8 +24,6 @@ function openModal(type) {
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
-
-// Removed the checkPayment function as the button has been removed.
 
 // Navigation functionality
 function showSection(section) {
@@ -40,8 +37,8 @@ function showSection(section) {
         // Currently no specific 'about' section content to show, so hide all.
     } else if (section === 'quiz') {
         document.getElementById('module-selection').style.display = 'block';
-    } else if (section === 'review') {
-        // Currently no specific 'review' section content to show, so hide all.
+    } else if (section === 'feedback') {
+        // You can add logic here to display feedback content if you create a feedback section
     }
     // Note: The original script did not handle 'progress' or 'qa' sections here.
 }
@@ -61,6 +58,24 @@ function showQuiz(moduleNum) {
     startQuiz(); // Trigger the quiz start based on the selected module
 }
 
+function showProgress() {
+    // Hide all known main content sections and elements explicitly
+    document.getElementById('quiz-section').style.display = 'none';
+    document.getElementById('progress-container').style.display = 'none';
+    document.getElementById('qa-section').style.display = 'none';
+    document.querySelector('.announcement-notice').style.display = 'none';
+    document.querySelector('.main-title').style.display = 'none';
+    document.querySelector('.check-progress-btn').style.display = 'none';
+    document.querySelector('.date').style.display = 'none';
+    document.querySelectorAll('.content-text').forEach(p => p.style.display = 'none');
+    document.querySelector('.important-note').style.display = 'none';
+    document.querySelector('.exam-info').style.display = 'none';
+    document.querySelector('.note-section').style.display = 'none';
+
+    document.getElementById('progress-container').style.display = 'block';
+    updateProgressBar(); // Ensure progress bar is updated when shown
+}
+
 // New function to populate the course module dropdown
 function populateCourseModules() {
     const courseModuleSelect = document.getElementById('course-module-select');
@@ -69,6 +84,12 @@ function populateCourseModules() {
         option.value = i;
         option.textContent = `Module ${i}`;
         courseModuleSelect.appendChild(option);
+    }
+}
+
+function showInfo(type) {
+    if (type === 'nptel') {
+        alert('SAKSHAM courses are online courses offered by IITs and IISc. They include video lectures, assignments, and certification exams.');
     }
 }
 
@@ -132,6 +153,12 @@ document.addEventListener('DOMContentLoaded', function() {
     populateModules();
     startQuizBtn.addEventListener('click', startQuiz);
     quizNextBtn.addEventListener('click', nextQuestion);
+
+    // Apply saved quiz button colors on load
+    for (const moduleNum in quizData) {
+        const score = moduleScores[moduleNum] || 0;
+        updateQuizButtonColor(parseInt(moduleNum), score);
+    }
 });
 
 // Quiz Data Structure
@@ -722,6 +749,7 @@ const quizNextBtn = document.getElementById('quiz-next-btn');
 let currentModule = null;
 let currentQuestionIndex = 0;
 let score = 0;
+let moduleScores = JSON.parse(localStorage.getItem('moduleScores')) || {}; // Load scores from local storage
 
 // Populate module select dropdown
 function populateModules() {
@@ -796,15 +824,17 @@ function nextQuestion() {
 function showResults() {
     const totalQuestions = quizData[currentModule].length;
     alert(`Quiz Finished! Your score: ${score} out of ${totalQuestions} (${(score / totalQuestions * 100).toFixed(0)}%)`);
-
-    if (score >= 7) {
-        const quizButton = document.getElementById(`quiz-button-module-${currentModule}`);
-        if (quizButton) {
-            quizButton.style.backgroundColor = 'green';
-            quizButton.style.color = 'white'; // Make text white for better contrast
-        }
-    }
-
+    moduleScores[currentModule] = score; // Store the score for the current module
+    localStorage.setItem('moduleScores', JSON.stringify(moduleScores)); // Save scores to local storage
+    updateQuizButtonColor(currentModule, score);
     document.getElementById('module-selection').style.display = 'block'; // Show module selection again
     quizDisplay.style.display = 'none';
+}
+
+function updateQuizButtonColor(moduleNum, score) {
+    const quizButton = document.getElementById(`quiz-button-module-${moduleNum}`);
+    if (quizButton && score >= 7) {
+        quizButton.classList.remove('quiz-button'); // Remove existing red style
+        quizButton.classList.add('quiz-button-passed'); // Add green style
+    }
 }

@@ -164,6 +164,20 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.check-payment-btn {
+    background-color: #6c757d;
+    /* Muted grey for secondary action */
+    color: white;
+    margin-bottom: 25px;
+    /* Adjusted margin */
+}
+
+.check-payment-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 .course-outline h3 {
     margin-bottom: 20px;
     color: #343a40;
@@ -229,7 +243,7 @@ body {
 }
 
 .quiz-button {
-    background-color: #a72828;
+    background-color: #e10b0b;
     /* Green for quiz */
     color: white;
     padding: 5px 10px;
@@ -241,7 +255,7 @@ body {
 }
 
 .quiz-button:hover {
-    background-color: #882821;
+    background-color: #670202;
     /* Darker green on hover */
     transform: translateY(-1px);
 }
@@ -296,6 +310,15 @@ body {
 .highlight {
     font-weight: bold;
     color: #007bff;
+}
+
+.important-note {
+    font-weight: bold;
+    color: #dc3545;
+    /* Use alert color */
+    margin: 25px 0 15px 0;
+    text-decoration: underline;
+    font-size: 1.1em;
 }
 
 .blue-link {
@@ -587,6 +610,44 @@ body {
 }
 
 
+/* Progress Bar Styles */
+
+#progress-container {
+    margin-top: 25px;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#progress-container h3 {
+    color: #343a40;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar-outline {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #28a745;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+
 /* Styles for completed quiz buttons */
 
 .completed-quiz {
@@ -594,6 +655,26 @@ body {
     color: white;
     cursor: default;
     opacity: 0.8;
+}
+
+.quiz-button-passed {
+    background-color: #28a745; /* Green color for passed quiz */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.quiz-button-passed:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-1px);
+}
+
+.quiz-button-passed:active {
+    transform: translateY(0);
 }
 
 .qa-item {
