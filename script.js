@@ -31,10 +31,8 @@ function showSection(section) {
         div.style.display = 'none';
     });
 
-    if (section === 'announcements') {
-        document.querySelector('.announcement-notice').style.display = 'block';
-    } else if (section === 'about') {
-        // Currently no specific 'about' section content to show, so hide all.
+    if (section === 'about') {
+        document.getElementById('about-section').style.display = 'block';
     } else if (section === 'quiz') {
         document.getElementById('module-selection').style.display = 'block';
     } else if (section === 'feedback') {
@@ -63,7 +61,6 @@ function showProgress() {
     document.getElementById('quiz-section').style.display = 'none';
     document.getElementById('progress-container').style.display = 'none';
     document.getElementById('qa-section').style.display = 'none';
-    document.querySelector('.announcement-notice').style.display = 'none';
     document.querySelector('.main-title').style.display = 'none';
     document.querySelector('.check-progress-btn').style.display = 'none';
     document.querySelector('.date').style.display = 'none';
