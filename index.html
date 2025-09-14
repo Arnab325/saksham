@@ -25,20 +25,18 @@
             <li onclick="showSection('announcements')">Announcements</li>
             <li onclick="showSection('about')">About the Course</li>
             <li onclick="showSection('qa')">Q&A</li>
-            <li onclick="showSection('progress')">Progress</li>
-            <li onclick="showSection('review')">Review Assignment</li>
+            <!-- Removed Progress tab as per user request -->
+            <li onclick="showSection('review')">Feedback</li>
         </ul>
     </nav>
 
     <div class="container">
         <aside class="sidebar">
             <button class="register-btn" onclick="openModal('register')">
-                Click to register for Certification exam
+                Final Test
             </button>
 
-            <button class="check-payment-btn" onclick="openModal('payment')">
-                If already registered, click to check your status
-            </button>
+            <!-- Removed the "check payment status" button as per user request -->
 
             <div class="course-outline">
                 <h3>Course outline</h3>
@@ -116,51 +114,18 @@
 
             <p class="content-text">Dear Candidate,</p>
 
-            <p class="content-text">
-                Here is a golden opportunity for those who had previously enrolled in this course during the
-                <span class="highlight">July 2024/Jan 2025</span> semester, but could not participate in the exams or were absent/did not pass the exam for this course. This course is being reoffered in July 2025 and we are giving you another chance to
-                write the exam on <span class="highlight">October 25, 2025</span>, and obtain a certificate based on NPTEL norms. Do not let go of this unique opportunity to earn a certificate from the IITs/IISc.
-            </p>
-
-            <div class="important-note">IMPORTANT Instructions for learners - Please read this carefully</div>
-
             <div class="exam-info">
                 <ul class="exam-instructions">
-                    <li> <strong>October 25, 2025</strong></li>
-                    <li><a href="#" class="blue-link" onclick="openModal('register')">CLICK HERE</a> to register for the exam.</li>
-                    <li>Please fill the exam form using the <span class="highlight">same Enrolled email ID</span> & make fee payment via the form, as before.</li>
-                    <li>Choose from the Cities where exam will be conducted: <a href="#" class="blue-link" onclick="showExamCities()">Exam Cities</a></li>
-                    <li>You DO NOT have to re-enroll in the courses.</li>
-                    <li>You DO NOT have to resubmit Assignments OR participate in the non-proctored programming exams (if applicable) in the previous semester.</li>
-                    <li>If you do enroll in the July 2025 course, we will take the best average assignment scores/non-proctored programming exam (if applicable) score across the two semesters.</li>
+                    <li>All "Quiz" buttons start in red.</li>
+                    <li>If you score 70% or higher, the buttons will change to green.</li>
+                    <li>If your score is below 70%, the buttons will remain red.</li>
+                    <li>Your total score will be shown after you finish the quiz.</li>
+                    
+                    <!-- Removed exam registration and re-enrollment instructions as per user request -->
                 </ul>
             </div>
 
-            <!-- Progress Section -->
-            <div id="progress-container" style="display:none;">
-                <h2>My Quiz Progress</h2>
-                <p id="quiz-progress-count">You have completed 0 quizzes with a score of 7 or above.</p>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill" id="quiz-progress-fill"></div>
-                </div>
-            </div>
-
-            <!-- Quiz Section (Original State with dropdown) -->
-            <div id="module-selection">
-                <h2>Select Module for Quiz</h2>
-                <select id="module-select"></select>
-                <button id="start-quiz-btn">Start Quiz</button>
-            </div>
-
-            <div id="quiz-section" style="display:none;">
-                <div id="quiz-display">
-                    <h3 id="quiz-question"></h3>
-                    <div id="quiz-options" class="options-container">
-                        <!-- Options will be populated by JavaScript -->
-                    </div>
-                    <button id="quiz-next-btn">Next Question</button>
-                </div>
-            </div>
+            <!-- Removed Progress Section, Quiz Section (Original State with dropdown), and Quiz Section (quiz display) as per user request -->
         </main>
     </div>
 

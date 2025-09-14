@@ -15,14 +15,7 @@ function openModal(type) {
                 <button onclick="closeModal()" style="background-color: #0984e3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px;">Continue to Registration</button>
             `;
             break;
-        case 'payment':
-            content = `
-                <h2>Check Payment Status</h2>
-                <p>Enter your registered email ID to check payment status:</p>
-                <input type="email" placeholder="Enter your email" style="width: 100%; padding: 10px; margin: 15px 0; border: 1px solid #ddd; border-radius: 5px;">
-                <button onclick="checkPayment()" style="background-color: #27ae60; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Check Status</button>
-            `;
-            break;
+        // Removed the 'payment' case as the button has been removed.
     }
 
     modalBody.innerHTML = content;
@@ -33,9 +26,7 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-function checkPayment() {
-    closeModal();
-}
+// Removed the checkPayment function as the button has been removed.
 
 // Navigation functionality
 function showSection(section) {
@@ -68,39 +59,6 @@ function showQuiz(moduleNum) {
     // It will be re-implemented to trigger the dropdown-based quiz start.
     document.getElementById('module-select').value = moduleNum;
     startQuiz(); // Trigger the quiz start based on the selected module
-}
-
-function showProgress() {
-    // Hide all known main content sections and elements explicitly
-    document.getElementById('quiz-section').style.display = 'none';
-    document.getElementById('progress-container').style.display = 'none';
-    document.getElementById('qa-section').style.display = 'none';
-    document.querySelector('.announcement-notice').style.display = 'none';
-    document.querySelector('.main-title').style.display = 'none';
-    document.querySelector('.check-progress-btn').style.display = 'none';
-    document.querySelector('.date').style.display = 'none';
-    document.querySelectorAll('.content-text').forEach(p => p.style.display = 'none');
-    document.querySelector('.important-note').style.display = 'none';
-    document.querySelector('.exam-info').style.display = 'none';
-    document.querySelector('.note-section').style.display = 'none';
-
-    const quizButtons = document.querySelectorAll('.module-quiz-button');
-    let quizzesPassed = 0;
-    quizButtons.forEach(button => {
-        if (button.style.backgroundColor === 'green') {
-            quizzesPassed++;
-        }
-    });
-    document.getElementById('quiz-progress-count').textContent = `You have completed ${quizzesPassed} quizzes with a score of 7 or above out of ${quizButtons.length} total quizzes.`;
-
-    // Update progress bar
-    const progressBarFill = document.getElementById('quiz-progress-fill');
-    const totalQuizzes = quizButtons.length;
-    const progressPercentage = totalQuizzes > 0 ? (quizzesPassed / totalQuizzes) * 100 : 0;
-    progressBarFill.style.width = `${progressPercentage}%`;
-
-    document.getElementById('progress-container').style.display = 'block';
-    // updateProgressBar(); // This function is not defined in the provided script, so I'm commenting it out
 }
 
 // New function to populate the course module dropdown
