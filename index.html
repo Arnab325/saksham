@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPTEL - Programming In Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <div class="logo">SWAYAM</div>
+            <div class="govt-logo">🇮🇳</div>
+        </div>
+        <div class="user-email">mondalshikha013@gmail.com ▼</div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="breadcrumb">
+            NPTEL » Programming In Java
+        </div>
+        <ul class="nav-menu">
+            <li onclick="showSection('announcements')">Announcements</li>
+            <li onclick="showSection('about')">About the Course</li>
+            <li onclick="showSection('qa')">Q&A</li>
+            <li onclick="showSection('progress')">Progress</li>
+            <li onclick="showSection('review')">Review Assignment</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="register-btn" onclick="openModal('register')">
+                Click to register for Certification exam
+            </button>
+
+            <button class="check-payment-btn" onclick="openModal('payment')">
+                If already registered, click to check your status
+            </button>
+
+            <div class="course-outline">
+                <h3>Course outline</h3>
+                <div style="margin-bottom: 20px;">
+                    <strong>About NPTEL</strong><br>
+                    <a href="#" class="blue-link" onclick="showInfo('nptel')">How does an NPTEL online course work?</a>
+                </div>
+                <ul class="week-list">
+                    <li onclick="showWeek(1)">Module 1 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(1); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(1); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(2)">Module 2 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(2); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(2); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(3)">Module 3 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(3); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(3); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(4)">Module 4 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(4); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(4); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(5)">Module 5 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(5); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(5); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(6)">Module 6 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(6); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(6); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(7)">Module 7 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(7); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(7); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(8)">Module 8 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(8); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(8); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(9)">Module 9 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(9); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(9); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(10)">Module 10 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(10); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(10); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                    <li onclick="showWeek(11)">Module 11 :
+                        <div style="margin-left: 15px; font-size: 12px; color: #888; margin-top: 5px;">
+                            <button class="lecture-button" onclick="showLecture(11); event.stopPropagation();">Lecture</button> • <button class="quiz-button" onclick="showQuiz(11); event.stopPropagation();">Quiz</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="announcement-notice">
+                There are new announcements since your last visit. Please have a look.
+            </div>
+
+            <h1 class="main-title">NPTEL courses!</h1>
+            <div class="date">2025-07-28</div>
+
+            <p class="content-text">Dear Candidate,</p>
+
+            <p class="content-text">
+                Here is a golden opportunity for those who had previously enrolled in this course during the
+                <span class="highlight">July 2024/Jan 2025</span> semester, but could not participate in the exams or were absent/did not pass the exam for this course. This course is being reoffered in July 2025 and we are giving you another chance to
+                write the exam on <span class="highlight">October 25, 2025</span>, and obtain a certificate based on NPTEL norms. Do not let go of this unique opportunity to earn a certificate from the IITs/IISc.
+            </p>
+
+            <div class="important-note">IMPORTANT Instructions for learners - Please read this carefully</div>
+
+            <div class="exam-info">
+                <ul class="exam-instructions">
+                    <li> <strong>October 25, 2025</strong></li>
+                    <li><a href="#" class="blue-link" onclick="openModal('register')">CLICK HERE</a> to register for the exam.</li>
+                    <li>Please fill the exam form using the <span class="highlight">same Enrolled email ID</span> & make fee payment via the form, as before.</li>
+                    <li>Choose from the Cities where exam will be conducted: <a href="#" class="blue-link" onclick="showExamCities()">Exam Cities</a></li>
+                    <li>You DO NOT have to re-enroll in the courses.</li>
+                    <li>You DO NOT have to resubmit Assignments OR participate in the non-proctored programming exams (if applicable) in the previous semester.</li>
+                    <li>If you do enroll in the July 2025 course, we will take the best average assignment scores/non-proctored programming exam (if applicable) score across the two semesters.</li>
+                </ul>
+            </div>
+
+            <div class="note-section">
+                <div class="note-title">NOTE:</div>
+                <p>Please check once if you have >= 40/100 in average assignment score and also participated and satisfied the criteria in the</p>
+            </div>
+
+            <!-- Quiz Section (Original State with dropdown) -->
+            <div id="module-selection">
+                <h2>Select Module for Quiz</h2>
+                <select id="module-select"></select>
+                <button id="start-quiz-btn">Start Quiz</button>
+            </div>
+
+            <div id="quiz-section" style="display:none;">
+                <div id="quiz-display">
+                    <h3 id="quiz-question"></h3>
+                    <div id="quiz-options" class="options-container">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                    <button id="quiz-next-btn">Next Question</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
