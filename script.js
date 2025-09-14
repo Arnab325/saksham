@@ -84,8 +84,23 @@ function showProgress() {
     document.querySelector('.exam-info').style.display = 'none';
     document.querySelector('.note-section').style.display = 'none';
 
+    const quizButtons = document.querySelectorAll('.module-quiz-button');
+    let quizzesPassed = 0;
+    quizButtons.forEach(button => {
+        if (button.style.backgroundColor === 'green') {
+            quizzesPassed++;
+        }
+    });
+    document.getElementById('quiz-progress-count').textContent = `You have completed ${quizzesPassed} quizzes with a score of 7 or above out of ${quizButtons.length} total quizzes.`;
+
+    // Update progress bar
+    const progressBarFill = document.getElementById('quiz-progress-fill');
+    const totalQuizzes = quizButtons.length;
+    const progressPercentage = totalQuizzes > 0 ? (quizzesPassed / totalQuizzes) * 100 : 0;
+    progressBarFill.style.width = `${progressPercentage}%`;
+
     document.getElementById('progress-container').style.display = 'block';
-    updateProgressBar(); // Ensure progress bar is updated when shown
+    // updateProgressBar(); // This function is not defined in the provided script, so I'm commenting it out
 }
 
 // New function to populate the course module dropdown
@@ -96,12 +111,6 @@ function populateCourseModules() {
         option.value = i;
         option.textContent = `Module ${i}`;
         courseModuleSelect.appendChild(option);
-    }
-}
-
-function showInfo(type) {
-    if (type === 'nptel') {
-        alert('NPTEL courses are online courses offered by IITs and IISc. They include video lectures, assignments, and certification exams.');
     }
 }
 
@@ -829,6 +838,15 @@ function nextQuestion() {
 function showResults() {
     const totalQuestions = quizData[currentModule].length;
     alert(`Quiz Finished! Your score: ${score} out of ${totalQuestions} (${(score / totalQuestions * 100).toFixed(0)}%)`);
+
+    if (score >= 7) {
+        const quizButton = document.getElementById(`quiz-button-module-${currentModule}`);
+        if (quizButton) {
+            quizButton.style.backgroundColor = 'green';
+            quizButton.style.color = 'white'; // Make text white for better contrast
+        }
+    }
+
     document.getElementById('module-selection').style.display = 'block'; // Show module selection again
     quizDisplay.style.display = 'none';
 }

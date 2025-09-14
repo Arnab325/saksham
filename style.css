@@ -5,20 +5,26 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Modern sans-serif font stack */
-    background-color: #f8f9fa; /* Lighter background */
+    font-family: 'Segoe UI', Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* Modern sans-serif font stack */
+    background-color: #f8f9fa;
+    /* Lighter background */
     line-height: 1.6;
-    color: #343a40; /* Darker text for readability */
+    color: #343a40;
+    /* Darker text for readability */
 }
 
 .header {
-    background-color: #343a40; /* Darker, more professional header */
+    background-color: #343a40;
+    /* Darker, more professional header */
     color: white;
-    padding: 15px 30px; /* Increased padding */
+    padding: 15px 30px;
+    /* Increased padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
 }
 
 .logo-section {
@@ -28,28 +34,34 @@ body {
 }
 
 .logo {
-    background-color: #007bff; /* Primary brand color */
+    background-color: #007bff;
+    /* Primary brand color */
     color: white;
-    padding: 8px 15px; /* More prominent logo */
+    padding: 8px 15px;
+    /* More prominent logo */
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.2em;
 }
 
 .govt-logo {
-    font-size: 24px; /* Larger emoji */
+    font-size: 24px;
+    /* Larger emoji */
 }
 
 .user-email {
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.9); /* Slightly lighter email text */
+    color: rgba(255, 255, 255, 0.9);
+    /* Slightly lighter email text */
     cursor: pointer;
 }
 
 .nav-bar {
-    background-color: #495057; /* Darker grey for navigation */
+    background-color: #495057;
+    /* Darker grey for navigation */
     padding: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
 }
 
 .nav-content {
@@ -58,7 +70,8 @@ body {
 }
 
 .breadcrumb {
-    background-color: #6c757d; /* Slightly lighter grey for breadcrumb */
+    background-color: #6c757d;
+    /* Slightly lighter grey for breadcrumb */
     padding: 12px 30px;
     color: white;
     font-size: 14px;
@@ -80,13 +93,16 @@ body {
 }
 
 .nav-menu li:hover {
-    background-color: #007bff; /* Highlight with primary color */
+    background-color: #007bff;
+    /* Highlight with primary color */
     color: white;
 }
 
 .nav-menu li.recommendations {
-    background-color: #ffc107; /* Brighter yellow for recommendations */
-    color: #343a40; /* Darker text for contrast */
+    background-color: #ffc107;
+    /* Brighter yellow for recommendations */
+    color: #343a40;
+    /* Darker text for contrast */
     position: relative;
     font-weight: bold;
 }
@@ -98,37 +114,47 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 25px auto; /* More vertical margin */
-    padding: 0 20px; /* Adjusted padding */
+    margin: 25px auto;
+    /* More vertical margin */
+    padding: 0 20px;
+    /* Adjusted padding */
     display: flex;
-    gap: 25px; /* Increased gap */
+    gap: 25px;
+    /* Increased gap */
 }
 
 .sidebar {
     width: 280px;
     background-color: white;
-    border-radius: 10px; /* More rounded corners */
-    padding: 25px; /* Increased padding */
+    border-radius: 10px;
+    /* More rounded corners */
+    padding: 25px;
+    /* Increased padding */
     height: fit-content;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Stronger shadow */
 }
 
 .register-btn,
 .check-payment-btn {
     width: 100%;
-    padding: 14px 20px; /* Consistent padding */
+    padding: 14px 20px;
+    /* Consistent padding */
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    margin-bottom: 15px; /* Consistent margin */
-    transition: all 0.3s ease; /* Smooth transitions */
+    margin-bottom: 15px;
+    /* Consistent margin */
+    transition: all 0.3s ease;
+    /* Smooth transitions */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .register-btn {
-    background-color: #dc3545; /* Alert/action color */
+    background-color: #dc3545;
+    /* Alert/action color */
     color: white;
 }
 
@@ -139,9 +165,11 @@ body {
 }
 
 .check-payment-btn {
-    background-color: #6c757d; /* Muted grey for secondary action */
+    background-color: #6c757d;
+    /* Muted grey for secondary action */
     color: white;
-    margin-bottom: 25px; /* Adjusted margin */
+    margin-bottom: 25px;
+    /* Adjusted margin */
 }
 
 .check-payment-btn:hover {
@@ -164,19 +192,23 @@ body {
 
 .week-list li {
     padding: 12px 0;
-    border-bottom: 1px solid #dee2e6; /* Lighter border */
+    border-bottom: 1px solid #dee2e6;
+    /* Lighter border */
     color: #495057;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .week-list li:hover {
-    color: #007bff; /* Primary color on hover */
-    background-color: #f1f3f5; /* Light background on hover */
+    color: #007bff;
+    /* Primary color on hover */
+    background-color: #f1f3f5;
+    /* Light background on hover */
 }
 
 .week-list li a {
-    color: #007bff; /* Ensure links within list items are blue */
+    color: #007bff;
+    /* Ensure links within list items are blue */
     text-decoration: none;
 }
 
@@ -185,7 +217,8 @@ body {
 }
 
 .lecture-button {
-    background-color: #007bff; /* Primary blue */
+    background-color: #007bff;
+    /* Primary blue */
     color: white;
     padding: 5px 10px;
     border: none;
@@ -193,20 +226,25 @@ body {
     cursor: pointer;
     font-size: 0.9em;
     transition: background-color 0.3s ease, transform 0.1s ease;
-    margin-right: 5px; /* Space between lecture button and quiz link */
+    margin-right: 5px;
+    /* Space between lecture button and quiz link */
 }
 
 .lecture-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-1px); /* Slight lift effect */
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: translateY(-1px);
+    /* Slight lift effect */
 }
 
 .lecture-button:active {
-    transform: translateY(0); /* Reset on click */
+    transform: translateY(0);
+    /* Reset on click */
 }
 
 .quiz-button {
-    background-color: #28a745; /* Green for quiz */
+    background-color: #a72828;
+    /* Green for quiz */
     color: white;
     padding: 5px 10px;
     border: none;
@@ -217,7 +255,8 @@ body {
 }
 
 .quiz-button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #882821;
+    /* Darker green on hover */
     transform: translateY(-1px);
 }
 
@@ -234,10 +273,12 @@ body {
 }
 
 .announcement-notice {
-    background-color: #e2f0fb; /* Lighter blue for notices */
+    background-color: #e2f0fb;
+    /* Lighter blue for notices */
     border: 1px solid #bce2f9;
     border-radius: 8px;
-    padding: 18px; /* More padding */
+    padding: 18px;
+    /* More padding */
     margin-bottom: 30px;
     color: #004085;
     font-size: 1.05em;
@@ -245,7 +286,8 @@ body {
 }
 
 .main-title {
-    font-size: 2.2em; /* Larger main title */
+    font-size: 2.2em;
+    /* Larger main title */
     margin-bottom: 10px;
     color: #212529;
     line-height: 1.3;
@@ -253,7 +295,8 @@ body {
 
 .date {
     color: #6c757d;
-    margin-bottom: 25px; /* More space */
+    margin-bottom: 25px;
+    /* More space */
     font-size: 0.9em;
 }
 
@@ -271,7 +314,8 @@ body {
 
 .important-note {
     font-weight: bold;
-    color: #dc3545; /* Use alert color */
+    color: #dc3545;
+    /* Use alert color */
     margin: 25px 0 15px 0;
     text-decoration: underline;
     font-size: 1.1em;
@@ -280,7 +324,8 @@ body {
 .blue-link {
     color: #007bff;
     text-decoration: none;
-    font-weight: 600; /* Slightly bolder */
+    font-weight: 600;
+    /* Slightly bolder */
 }
 
 .blue-link:hover {
@@ -289,7 +334,8 @@ body {
 
 .exam-info {
     background-color: #e2f0fb;
-    border-left: 5px solid #007bff; /* Stronger border */
+    border-left: 5px solid #007bff;
+    /* Stronger border */
     padding: 25px;
     margin: 25px 0;
     border-radius: 0 8px 8px 0;
@@ -310,7 +356,8 @@ body {
 .exam-instructions li {
     counter-increment: instruction-counter;
     margin-bottom: 10px;
-    padding-left: 30px; /* More space for counter */
+    padding-left: 30px;
+    /* More space for counter */
     position: relative;
     color: #343a40;
 }
@@ -320,7 +367,8 @@ body {
     position: absolute;
     left: 0;
     font-weight: bold;
-    color: #007bff; /* Primary color for counter */
+    color: #007bff;
+    /* Primary color for counter */
 }
 
 .note-section {
@@ -347,18 +395,24 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Darker overlay */
 }
 
 .modal-content {
     background-color: white;
-    margin: 8% auto; /* Adjusted vertical margin */
-    padding: 35px; /* Increased padding */
-    border-radius: 12px; /* More rounded corners */
+    margin: 8% auto;
+    /* Adjusted vertical margin */
+    padding: 35px;
+    /* Increased padding */
+    border-radius: 12px;
+    /* More rounded corners */
     width: 90%;
-    max-width: 550px; /* Slightly wider */
+    max-width: 550px;
+    /* Slightly wider */
     text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow */
 }
 
 .modal-content h2 {
@@ -395,8 +449,10 @@ body {
 .close {
     color: #6c757d;
     float: right;
-    font-size: 32px; /* Larger close button */
-    font-weight: normal; /* Less bold */
+    font-size: 32px;
+    /* Larger close button */
+    font-weight: normal;
+    /* Less bold */
     cursor: pointer;
     transition: color 0.2s ease;
 }
@@ -405,13 +461,19 @@ body {
     color: #343a40;
 }
 
+
 /* Quiz Section Styles */
+
 #quiz-section {
     background-color: #ffffff;
-    padding: 30px; /* More padding */
-    border-radius: 10px; /* More rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
-    margin-top: 25px; /* Adjusted margin */
+    padding: 30px;
+    /* More padding */
+    border-radius: 10px;
+    /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Stronger shadow */
+    margin-top: 25px;
+    /* Adjusted margin */
 }
 
 #quiz-section h2 {
@@ -427,9 +489,11 @@ body {
     border-radius: 8px;
     font-size: 1.05em;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    appearance: none; /* Remove default select styling */
+    appearance: none;
+    /* Remove default select styling */
     background-color: white;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%20197.9c-3.1%203.1-7.1%204.7-11.2%204.7H16.6c-4.1%200-8.1-1.6-11.2-4.7-6.2-6.2-6.2-16.4%200-22.6L134.9%2034.7c6.2-6.2%2016.4-6.2%2022.6%200l129.5%20129.5c6.3%206.2%206.3%2016.4%20.2%2022.6z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%20197.9c-3.1%203.1-7.1%204.7-11.2%204.7H16.6c-4.1%200-8.1-1.6-11.2-4.7-6.2-6.2-6.2-16.4%200-22.6L134.9%2034.7c6.2-6.2%2016.4-6.2%2022.6%200l129.5%20129.5c6.3%206.2%206.3%2016.4%20.2%2022.6z%22%2F%3E%3C%2Fsvg%3E');
+    /* Custom arrow */
     background-repeat: no-repeat;
     background-position: right 15px center;
     background-size: 12px;
@@ -461,11 +525,13 @@ body {
 }
 
 #quiz-display {
-    margin-top: 30px; /* More spacing */
+    margin-top: 30px;
+    /* More spacing */
 }
 
 #quiz-question {
-    font-size: 1.4em; /* Larger font for questions */
+    font-size: 1.4em;
+    /* Larger font for questions */
     margin-bottom: 25px;
     color: #343a40;
 }
@@ -473,12 +539,14 @@ body {
 .options-container {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* More space between options */
+    gap: 15px;
+    /* More space between options */
     margin-bottom: 30px;
 }
 
 .quiz-option {
-    background-color: #f1f3f5; /* Lighter background for options */
+    background-color: #f1f3f5;
+    /* Lighter background for options */
     border: 1px solid #dee2e6;
     padding: 14px 20px;
     border-radius: 8px;
@@ -487,13 +555,15 @@ body {
     transition: all 0.3s ease;
     font-size: 1.05em;
     color: #495057;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow for options */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for options */
 }
 
 .quiz-option:hover {
     background-color: #e2e6ea;
     border-color: #007bff;
-    transform: translateY(-2px); /* Lift effect on hover */
+    transform: translateY(-2px);
+    /* Lift effect on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -502,7 +572,8 @@ body {
     border-color: #28a745;
     color: #155724;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.2); /* Green shadow */
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.2);
+    /* Green shadow */
 }
 
 .quiz-option.incorrect {
@@ -510,7 +581,8 @@ body {
     border-color: #dc3545;
     color: #721c24;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.2); /* Red shadow */
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.2);
+    /* Red shadow */
 }
 
 .quiz-option:disabled {
@@ -537,13 +609,36 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+
 /* Progress Bar Styles */
+
 #progress-container {
     margin-top: 25px;
     background-color: #e9ecef;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 15px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #28a745; /* Green color for progress */
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 12px;
+    transition: width 0.5s ease-in-out;
 }
 
 #progress-container h3 {
@@ -555,25 +650,9 @@ body {
     align-items: center;
 }
 
-.progress-bar-outline {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-#progress-bar {
-    height: 20px;
-    width: 0%;
-    background-color: #28a745;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 20px;
-    color: white;
-    font-size: 12px;
-}
 
 /* Styles for completed quiz buttons */
+
 .completed-quiz {
     background-color: #6c757d;
     color: white;
@@ -606,42 +685,36 @@ body {
         flex-direction: column;
         padding: 0 15px;
     }
-
     .sidebar {
         width: 100%;
         margin-bottom: 20px;
     }
-
     .nav-bar .nav-menu {
         padding: 0 15px;
     }
-
     .nav-menu li {
-        flex-basis: 100%; /* Full width for smaller screens */
+        flex-basis: 100%;
+        /* Full width for smaller screens */
         text-align: center;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     .header {
         flex-direction: column;
         padding: 15px;
         gap: 10px;
     }
-
     .user-email {
         margin-top: 10px;
     }
-
     .main-title {
         font-size: 1.8em;
     }
-
     #quiz-section h2 {
         font-size: 1.5em;
     }
-
-    #module-select, #start-quiz-btn {
+    #module-select,
+    #start-quiz-btn {
         width: 100%;
         margin-right: 0;
         margin-bottom: 10px;
@@ -654,12 +727,10 @@ body {
         margin: 5% auto;
         padding: 25px;
     }
-
     .header .logo-section {
         flex-direction: column;
         gap: 5px;
     }
-
     .logo {
         padding: 6px 12px;
         font-size: 1em;
