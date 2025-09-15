@@ -58,6 +58,21 @@ function showLecture(moduleNum) {
     // Add more lecture content display logic for other modules if needed
 }
 
+function showFinalTest() {
+    // Hide all main content sections
+    document.querySelectorAll('.main-content > div.content-section, .main-content > div:not(.announcement-notice)').forEach(div => {
+        div.style.display = 'none';
+    });
+    document.querySelector('.main-title').style.display = 'none';
+    document.querySelector('.important-note').style.display = 'none';
+    document.querySelector('.exam-info').style.display = 'none';
+    document.getElementById('module-selection').style.display = 'none';
+    document.getElementById('quiz-section').style.display = 'none';
+
+    // Display the final test section
+    document.getElementById('final-test-section').style.display = 'block';
+}
+
 function showQuiz(moduleNum) {
     // Original script used a dropdown, this function was not directly called from sidebar buttons.
     // It will be re-implemented to trigger the dropdown-based quiz start.
@@ -137,12 +152,61 @@ document.addEventListener('DOMContentLoaded', function() {
     startQuizBtn.addEventListener('click', startQuiz);
     quizNextBtn.addEventListener('click', nextQuestion);
 
+    // Final Test functionality
+    const finalQuizForm = document.getElementById('final-quiz-form');
+    if (finalQuizForm) {
+        finalQuizForm.addEventListener('submit', submitFinalTest);
+    }
+
     // Apply saved quiz button colors on load
     for (const moduleNum in quizData) {
         const score = moduleScores[moduleNum] || 0;
         updateQuizButtonColor(parseInt(moduleNum), score);
     }
 });
+
+const finalTestAnswers = {
+    q1: "b",
+    q2: "a",
+    q3: "b",
+    q4: "c",
+    q5: "d",
+    q6: "b",
+    q7: "c",
+    q8: "b",
+    q9: "b",
+    q10: "b"
+};
+
+function submitFinalTest(event) {
+    event.preventDefault();
+    let finalScore = 0;
+    const totalFinalQuestions = Object.keys(finalTestAnswers).length;
+    const testResultsDiv = document.getElementById('test-results');
+    testResultsDiv.innerHTML = ''; // Clear previous results
+
+    for (let i = 1; i <= totalFinalQuestions; i++) {
+        const questionName = `q${i}`;
+        const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+        const correctAnswer = finalTestAnswers[questionName];
+
+        const resultP = document.createElement('p');
+        if (selectedOption && selectedOption.value === correctAnswer) {
+            finalScore++;
+            resultP.innerHTML = `Question ${i}: Correct!`;
+            resultP.style.color = 'green';
+        } else {
+            resultP.innerHTML = `Question ${i}: Incorrect. The correct answer was ${correctAnswer.toUpperCase()}.`;
+            resultP.style.color = 'red';
+        }
+        testResultsDiv.appendChild(resultP);
+    }
+
+    const finalScoreP = document.createElement('h3');
+    finalScoreP.textContent = `You scored ${finalScore} out of ${totalFinalQuestions}!`;
+    finalScoreP.style.marginTop = '20px';
+    testResultsDiv.prepend(finalScoreP);
+}
 
 // Quiz Data Structure
 const quizData = {

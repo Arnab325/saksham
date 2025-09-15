@@ -658,7 +658,8 @@ body {
 }
 
 .quiz-button-passed {
-    background-color: #28a745; /* Green color for passed quiz */
+    background-color: #28a745;
+    /* Green color for passed quiz */
     color: white;
     padding: 5px 10px;
     border: none;
@@ -669,7 +670,8 @@ body {
 }
 
 .quiz-button-passed:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
+    /* Darker green on hover */
     transform: translateY(-1px);
 }
 
@@ -698,9 +700,9 @@ body {
 }
 
 .content-section {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
     margin-top: 20px;

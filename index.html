@@ -31,7 +31,7 @@
 
     <div class="container">
         <aside class="sidebar">
-            <button class="register-btn" onclick="openModal('register')">
+            <button class="register-btn" onclick="showFinalTest()">
                 Final Test
             </button>
 
@@ -397,6 +397,93 @@
                 <p>Disasters can wipe out years of development progress, pushing people back into poverty and damaging health and education systems. Therefore, effective disaster risk reduction is essential for achieving the SDGs 🌍.</p>
             </div>
 
+            <div id="final-test-section" class="content-section">
+                <h2>Final Test</h2>
+                <form id="final-quiz-form">
+                    <div class="question-block">
+                        <p>1. The core concept of 'Disaster Risk' is best understood as the interaction between:</p>
+                        <label><input type="radio" name="q1" value="a"> a) The frequency of past disasters and the speed of the response.</label><br>
+                        <label><input type="radio" name="q1" value="b"> b) A potentially damaging hazard and the vulnerability of a community exposed to it. Vulnerability</label><br>
+                        <label><input type="radio" name="q1" value="c"> c) The capacity of the NDRF and the amount of international aid received.</label><br>
+                        <label><input type="radio" name="q1" value="d"> d) The accuracy of an early warning and the effectiveness of the evacuation.</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>2. Which of the following pairs correctly differentiates between 'Mitigation' and 'Preparedness'?</p>
+                        <label><input type="radio" name="q2" value="a"> a) Mitigation is building a cyclone shelter (reducing impact), while Preparedness is conducting an evacuation drill for that shelter (improving response).</label><br>
+                        <label><input type="radio" name="q2" value="b"> b) Mitigation is conducting a drill (improving response), while Preparedness is creating zoning laws (reducing impact).</label><br>
+                        <label><input type="radio" name="q2" value="c"> c) Mitigation is distributing relief supplies, while Preparedness is rebuilding houses.</label><br>
+                        <label><input type="radio" name="q2" value="d"> d) Mitigation is long-term, while Preparedness is exclusively short-term.</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>3. In the immediate aftermath of a mass-casualty event like an earthquake, the primary goal of the 'Response' phase is to save the maximum number of lives, often using a system of ______ to prioritize medical treatment.</p>
+                        <label><input type="radio" name="q3" value="a"> a) Damage assessment</label><br>
+                        <label><input type="radio" name="q3" value="b"> b) Triage</label><br>
+                        <label><input type="radio" name="q3" value="c"> c) Risk mapping</label><br>
+                        <label><input type="radio" name="q3" value="d"> d) Financial compensation</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>4. The post-disaster principle of "Building Back Better" (BBB) primarily advocates for:</p>
+                        <label><input type="radio" name="q4" value="a"> a) Rebuilding all damaged structures as quickly as possible, using the same original designs.</label><br>
+                        <label><input type="radio" name="q4" value="b"> b) Focusing only on economic recovery and ignoring social and environmental factors.</label><br>
+                        <label><input type="radio" name="q4" value="c"> c) Using the recovery process as an opportunity to reduce underlying vulnerabilities and build future resilience. Resilience</label><br>
+                        <label><input type="radio" name="q4" value="d"> d) Ensuring that reconstruction is funded entirely by international agencies.</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>5. Under India's Disaster Management Act of 2005, the National Disaster Management Authority (NDMA) is the apex policy-making body, and it is chaired by the:</p>
+                        <label><input type="radio" name="q5" value="a"> a) Union Home Minister</label><br>
+                        <label><input type="radio" name="q5" value="b"> b) President of India</label><br>
+                        <label><input type="radio" name="q5" value="c"> c) Cabinet Secretary</label><br>
+                        <label><input type="radio" name="q5" value="d"> d) Prime Minister of India 🇮🇳</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>6. The primary difference between India's National Disaster Response Force (NDRF) and a State Disaster Response Force (SDRF) is that:</p>
+                        <label><input type="radio" name="q6" value="a"> a) The NDRF handles only man-made disasters, while the SDRF handles only natural ones.</label><br>
+                        <label><input type="radio" name="q6" value="b"> b) The SDRF is the first responder within a state, while the NDRF is a specialized force deployed for severe situations or when a state requests assistance.</label><br>
+                        <label><input type="radio" name="q6" value="c"> c) The NDRF is responsible for mitigation, while the SDRF is responsible for recovery.</label><br>
+                        <label><input type="radio" name="q6" value="d"> d) The NDRF is a permanent government body, while the SDRF is a temporary volunteer force.</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>7. The core philosophy of Community-Based Disaster Management (CBDM) in the Indian context emphasizes the critical role of:</p>
+                        <label><input type="radio" name="q7" value="a"> a) A top-down command structure where communities only follow instructions from the DDMA.</label><br>
+                        <label><input type="radio" name="q7" value="b"> b) International NGOs leading all local-level planning and response.</label><br>
+                        <label><input type="radio" name="q7" value="c"> c) Panchayati Raj Institutions (PRIs) and local communities using their traditional knowledge to develop their own disaster management plans.</label><br>
+                        <label><input type="radio" name="q7" value="d"> d) The private sector in funding all community-level initiatives.</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>8. After a major flood, the state government conducts a detailed assessment of damages to infrastructure, housing, and agriculture. This assessment forms the basis for:</p>
+                        <label><input type="radio" name="q8" value="a"> a) Issuing an early warning for the next flood.</label><br>
+                        <label><input type="radio" name="q8" value="b"> b) Justifying the request for financial assistance from the State and National Disaster Response Funds (SDRF/NDRF).</label><br>
+                        <label><input type="radio" name="q8" value="c"> c) Prosecuting officials for negligence.</label><br>
+                        <label><input type="radio" name="q8" value="d"> d) Conducting a national census.</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>9. How is climate change impacting the disaster profile of India?</p>
+                        <label><input type="radio" name="q9" value="a"> a) It is decreasing the frequency of all natural disasters.</label><br>
+                        <label><input type="radio" name="q9" value="b"> b) It is increasing the frequency and intensity of hydro-meteorological events like cyclones, extreme rainfall, and heatwaves. 🌡️</label><br>
+                        <label><input type="radio" name="q9" value="c"> c) It is only affecting the Himalayan ecosystem with glacial melt.</label><br>
+                        <label><input type="radio" name="q9" value="d"> d) It has no scientifically proven connection to disaster frequency.</label><br>
+                    </div>
+
+                    <div class="question-block">
+                        <p>10. A week before a cyclone is predicted to make landfall in Kolkata, the West Bengal government reviews its evacuation plans and checks the readiness of its cyclone shelters. This set of actions belongs to which phase of the disaster management cycle?</p>
+                        <label><input type="radio" name="q10" value="a"> a) Mitigation</label><br>
+                        <label><input type="radio" name="q10" value="b"> b) Preparedness 📢</label><br>
+                        <label><input type="radio" name="q10" value="c"> c) Response</label><br>
+                        <label><input type="radio" name="q10" value="d"> d) Recovery</label><br>
+                    </div>
+
+                    <button type="submit" id="submit-test-btn">Submit Test</button>
+                    <div id="test-results"></div>
+                </form>
+            </div>
         </main>
     </div>
 
