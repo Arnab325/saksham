@@ -33,6 +33,13 @@ body {
     gap: 15px;
 }
 
+.logo-section a{
+    color: rgb(224, 202, 202);
+    font-weight: 900;
+    font-size: larger;
+    text-decoration: none;
+}
+
 .logo {
     background-color: #007bff;
     /* Primary brand color */
@@ -92,8 +99,13 @@ body {
     color: white;
 }
 
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
 .nav-menu li:hover {
-    background-color: #007bff;
+    background-color: #000000;
     /* Highlight with primary color */
     color: white;
 }

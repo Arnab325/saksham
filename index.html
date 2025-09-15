@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAKSHAM - Disaster Awareness and Preparedness</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
         <div class="logo-section">
+            <a href="https://saksham-ashen.vercel.app/"> <i class="fas fa-arrow-left"></i>Back</a>
             <div class="logo">SAKSHAM</div>
-            <div class="govt-logo">🇮🇳</div>
+        <div class="govt-logo">🇮🇳</div>
         </div>
         <div class="user-email">email</div>
     </header>
@@ -25,13 +27,20 @@
             <!-- <li onclick="showSection('announcements')">Announcements</li> -->
             <li onclick="showSection('about')">About the Course</li>
             <li onclick="showSection('qa')">Q&A</li>
-            <li onclick="showSection('feedback')">Feedback</li>
+            <li><a href="https://forms.gle/Z2kzgC158xcC2hUc7">Feedback</a></li>
         </ul>
+
+
+
+
+
+
+
     </nav>
 
     <div class="container">
         <aside class="sidebar">
-            <button class="register-btn" onclick="showFinalTest()">
+            <button class="register-btn" onclick="showFinalTest()" id="final-test-button" disabled>
                 Final Test
             </button>
 
@@ -158,13 +167,17 @@
                 <p>This module introduces the core vocabulary of disaster management.</p>
 
                 <h3>Hazard vs. Disaster:</h3>
-                <p>A hazard is any potential source of harm (e.g., an earthquake, a cyclone, a chemical factory). It only becomes a disaster when it impacts a community that cannot cope with its own resources. A landslide in an uninhabited area is a hazard event, not a disaster.</p>
+                <p>A hazard is any potential source of harm (e.g., an earthquake, a cyclone, a chemical factory). It only becomes a disaster when it impacts a community that cannot cope with its own resources. A landslide in an uninhabited area is a hazard
+                    event, not a disaster.</p>
 
                 <h3>Vulnerability:</h3>
-                <p>This refers to the conditions that make a community susceptible to a hazard's impact. It can be physical (weak buildings), social (poverty, gender, age), or economic (reliance on a single crop). High population density in India's Gangetic plains, for example, increases vulnerability to floods.</p>
+                <p>This refers to the conditions that make a community susceptible to a hazard's impact. It can be physical (weak buildings), social (poverty, gender, age), or economic (reliance on a single crop). High population density in India's Gangetic
+                    plains, for example, increases vulnerability to floods.</p>
 
                 <h3>Risk:</h3>
-                <p>This is the probability of harm or loss. The core formula is Risk = Hazard x Vulnerability. You can have a high hazard (like a severe earthquake zone) but reduce the risk by lowering vulnerability (building stronger, earthquake-resistant houses).</p>
+                <p>This is the probability of harm or loss. The core formula is Risk = Hazard x Vulnerability. You can have a high hazard (like a severe earthquake zone) but reduce the risk by lowering vulnerability (building stronger, earthquake-resistant
+                    houses).
+                </p>
 
                 <h3>Capacity & Resilience:</h3>
                 <p>Capacity refers to a community's strengths and resources (e.g., a strong local government, community savings). Resilience 💪 is the ability to resist, absorb, and recover from a disaster. High capacity leads to high resilience.</p>
@@ -290,7 +303,8 @@
                     <li><strong>First Responders:</strong> The local community and district administration are the first to respond.</li>
                     <li><strong>State Government:</strong> The primary responsibility for response lies with the State.</li>
                     <li><strong>Central Support:</strong> If the disaster is severe, the state can request assistance from the center, including the deployment of the NDRF and the Armed Forces 🚁 (for logistics, evacuation, etc.).</li>
-                    <li><strong>Incident Response System (IRS):</strong> India has adopted this system to provide a standardized framework for coordinating the actions of various departments (police, fire, health, etc.) under a single command structure during an emergency.</li>
+                    <li><strong>Incident Response System (IRS):</strong> India has adopted this system to provide a standardized framework for coordinating the actions of various departments (police, fire, health, etc.) under a single command structure during
+                        an emergency.</li>
                 </ul>
             </div>
 
@@ -321,7 +335,9 @@
                 <p>This is the long-term phase of rebuilding and restoring the community.</p>
 
                 <h3>Building Back Better (BBB):</h3>
-                <p>This is a key principle. It means not just rebuilding what was lost, but using the recovery process as an opportunity to reduce vulnerabilities and build a more resilient community. For example, rebuilding houses with stronger, earthquake-resistant designs.</p>
+                <p>This is a key principle. It means not just rebuilding what was lost, but using the recovery process as an opportunity to reduce vulnerabilities and build a more resilient community. For example, rebuilding houses with stronger, earthquake-resistant
+                    designs.
+                </p>
 
                 <h3>Key Components:</h3>
                 <ul>
@@ -335,7 +351,8 @@
                 </ul>
 
                 <h3>Indian Case Studies:</h3>
-                <p>The recovery after the 2001 Bhuj Earthquake and the 2004 Indian Ocean Tsunami involved large-scale housing reconstruction programs that incorporated BBB principles and often used an "owner-driven" model, which empowers families to rebuild their own homes with technical and financial support.</p>
+                <p>The recovery after the 2001 Bhuj Earthquake and the 2004 Indian Ocean Tsunami involved large-scale housing reconstruction programs that incorporated BBB principles and often used an "owner-driven" model, which empowers families to rebuild
+                    their own homes with technical and financial support.</p>
             </div>
 
             <div id="module-notes-9" class="content-section">
@@ -370,7 +387,8 @@
                 <p>Communities are not helpless victims; they are the first responders and have valuable local knowledge about their environment, risks, and capacities.</p>
 
                 <h3>Process:</h3>
-                <p>CBDM involves a participatory process where the community itself assesses its risks, creates its own plans, and forms its own teams (e.g., for early warning, evacuation, first aid). The role of the government or NGOs is to act as facilitators, not directors.</p>
+                <p>CBDM involves a participatory process where the community itself assesses its risks, creates its own plans, and forms its own teams (e.g., for early warning, evacuation, first aid). The role of the government or NGOs is to act as facilitators,
+                    not directors.</p>
 
                 <h3>CBDM in India:</h3>
                 <ul>
@@ -388,7 +406,8 @@
                 <p>It is increasing the frequency and intensity of hydro-meteorological disasters like cyclones, floods, and heatwaves in India, making climate change adaptation a critical part of disaster risk reduction 🌡️.</p>
 
                 <h3>Gender and Social Inclusion:</h3>
-                <p>Disasters affect different social groups differently. Women, children, the elderly, persons with disabilities, and marginalized caste groups are often disproportionately affected. Planning must be inclusive to address their specific needs and vulnerabilities.</p>
+                <p>Disasters affect different social groups differently. Women, children, the elderly, persons with disabilities, and marginalized caste groups are often disproportionately affected. Planning must be inclusive to address their specific needs
+                    and vulnerabilities.</p>
 
                 <h3>Technology:</h3>
                 <p>Modern technology plays a huge role. GIS is used for hazard mapping, satellite communication is vital when ground networks fail, and drones are used for rapid damage assessment. ISRO's satellites are a key asset for India.</p>
@@ -473,7 +492,8 @@
                     </div>
 
                     <div class="question-block">
-                        <p>10. A week before a cyclone is predicted to make landfall in Kolkata, the West Bengal government reviews its evacuation plans and checks the readiness of its cyclone shelters. This set of actions belongs to which phase of the disaster management cycle?</p>
+                        <p>10. A week before a cyclone is predicted to make landfall in Kolkata, the West Bengal government reviews its evacuation plans and checks the readiness of its cyclone shelters. This set of actions belongs to which phase of the disaster
+                            management cycle?</p>
                         <label><input type="radio" name="q10" value="a"> a) Mitigation</label><br>
                         <label><input type="radio" name="q10" value="b"> b) Preparedness 📢</label><br>
                         <label><input type="radio" name="q10" value="c"> c) Response</label><br>
@@ -485,19 +505,19 @@
                 </form>
             </div>
         </main>
-    </div>
+        </div>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="modal-body">
-                <!-- Modal content will be inserted here -->
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modal-body">
+                    <!-- Modal content will be inserted here -->
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

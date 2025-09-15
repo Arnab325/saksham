@@ -163,6 +163,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const score = moduleScores[moduleNum] || 0;
         updateQuizButtonColor(parseInt(moduleNum), score);
     }
+
+    // Check if final test should be enabled on load
+    if (finalTestButton) {
+        finalTestButton.disabled = !checkAllQuizzesPassed();
+        updateFinalTestButtonState(); // Update button state on load
+    }
 });
 
 const finalTestAnswers = {
@@ -206,6 +212,13 @@ function submitFinalTest(event) {
     finalScoreP.textContent = `You scored ${finalScore} out of ${totalFinalQuestions}!`;
     finalScoreP.style.marginTop = '20px';
     testResultsDiv.prepend(finalScoreP);
+
+    // Save final test score to local storage
+    localStorage.setItem('finalTestScore', finalScore);
+    localStorage.setItem('totalFinalQuestions', totalFinalQuestions);
+
+    // Update final test button state
+    updateFinalTestButtonState();
 }
 
 // Quiz Data Structure
@@ -786,6 +799,7 @@ let currentModule = null;
 let currentQuestionIndex = 0;
 let score = 0;
 let moduleScores = JSON.parse(localStorage.getItem('moduleScores')) || {}; // Load scores from local storage
+const finalTestButton = document.getElementById('final-test-button');
 
 // Populate module select dropdown
 function populateModules() {
@@ -863,6 +877,12 @@ function showResults() {
     moduleScores[currentModule] = score; // Store the score for the current module
     localStorage.setItem('moduleScores', JSON.stringify(moduleScores)); // Save scores to local storage
     updateQuizButtonColor(currentModule, score);
+    
+    // Check if final test should be enabled after this quiz
+    if (finalTestButton) {
+        finalTestButton.disabled = !checkAllQuizzesPassed();
+    }
+    
     document.getElementById('module-selection').style.display = 'block'; // Show module selection again
     quizDisplay.style.display = 'none';
 }
@@ -873,4 +893,37 @@ function updateQuizButtonColor(moduleNum, score) {
         quizButton.classList.remove('quiz-button'); // Remove existing red style
         quizButton.classList.add('quiz-button-passed'); // Add green style
     }
+}
+
+function updateFinalTestButtonState() {
+    const finalScore = parseInt(localStorage.getItem('finalTestScore')) || 0;
+    const totalFinalQuestions = parseInt(localStorage.getItem('totalFinalQuestions')) || 0;
+    const finalTestButton = document.getElementById('final-test-button');
+
+    if (finalTestButton && totalFinalQuestions > 0) {
+        const percentage = (finalScore / totalFinalQuestions) * 100;
+        if (percentage >= 40) {
+            finalTestButton.classList.remove('register-btn'); // Remove default style
+            finalTestButton.classList.add('quiz-button-passed'); // Use passed style
+            finalTestButton.textContent = 'Final Test (Passed)';
+        } else {
+            finalTestButton.classList.remove('quiz-button-passed');
+            finalTestButton.classList.add('register-btn'); // Revert to default style if not passed
+            finalTestButton.textContent = 'Final Test';
+        }
+    }
+}
+
+function checkAllQuizzesPassed() {
+    const totalModules = Object.keys(quizData).length;
+    let passedQuizzes = 0;
+    for (let i = 1; i <= totalModules; i++) {
+        const moduleScore = moduleScores[i];
+        const totalQuestions = quizData[i].length;
+        const percentage = (moduleScore / totalQuestions) * 100;
+        if (moduleScore !== undefined && percentage >= 70) {
+            passedQuizzes++;
+        }
+    }
+    return passedQuizzes === totalModules;
 }
