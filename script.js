@@ -22,7 +22,40 @@ function showWeek(weekNum) {
 }
 
 function showLecture(moduleNum) {
-    // Original script did not have specific content display for showLecture
+    // Hide all main content sections
+    document.querySelectorAll('.main-content > div.content-section, .main-content > div:not(.announcement-notice)').forEach(div => {
+        div.style.display = 'none';
+    });
+    document.querySelector('.main-title').style.display = 'none';
+    document.querySelector('.important-note').style.display = 'none';
+    document.querySelector('.exam-info').style.display = 'none';
+    document.getElementById('module-selection').style.display = 'none';
+    document.getElementById('quiz-section').style.display = 'none';
+
+    if (moduleNum === 1) {
+        document.getElementById('module-notes').style.display = 'block';
+    } else if (moduleNum === 2) {
+        document.getElementById('module-notes-2').style.display = 'block';
+    } else if (moduleNum === 3) {
+        document.getElementById('module-notes-3').style.display = 'block';
+    } else if (moduleNum === 4) {
+        document.getElementById('module-notes-4').style.display = 'block';
+    } else if (moduleNum === 5) {
+        document.getElementById('module-notes-5').style.display = 'block';
+    } else if (moduleNum === 6) {
+        document.getElementById('module-notes-6').style.display = 'block';
+    } else if (moduleNum === 7) {
+        document.getElementById('module-notes-7').style.display = 'block';
+    } else if (moduleNum === 8) {
+        document.getElementById('module-notes-8').style.display = 'block';
+    } else if (moduleNum === 9) {
+        document.getElementById('module-notes-9').style.display = 'block';
+    } else if (moduleNum === 10) {
+        document.getElementById('module-notes-10').style.display = 'block';
+    } else if (moduleNum === 11) {
+        document.getElementById('module-notes-11').style.display = 'block';
+    }
+    // Add more lecture content display logic for other modules if needed
 }
 
 function showQuiz(moduleNum) {

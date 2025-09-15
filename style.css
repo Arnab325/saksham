@@ -697,6 +697,25 @@ body {
     margin-bottom: 0;
 }
 
+.content-section {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+#module-notes ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#module-notes li {
+    margin-bottom: 5px;
+}
+
 @media (max-width: 992px) {
     .container {
         flex-direction: column;
