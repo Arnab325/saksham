@@ -77,6 +77,29 @@ function showQuiz(moduleNum) {
     // Original script used a dropdown, this function was not directly called from sidebar buttons.
     // It will be re-implemented to trigger the dropdown-based quiz start.
     document.getElementById('module-select').value = moduleNum;
+    
+        document.getElementById('module-notes').style.display = 'none';
+    
+        document.getElementById('module-notes-2').style.display = 'none';
+    
+        document.getElementById('module-notes-3').style.display = 'none';
+    
+        document.getElementById('module-notes-4').style.display = 'none';
+    
+        document.getElementById('module-notes-5').style.display = 'none';
+    
+        document.getElementById('module-notes-6').style.display = 'none';
+    
+        document.getElementById('module-notes-7').style.display = 'none';
+    
+        document.getElementById('module-notes-8').style.display = 'none';
+    
+        document.getElementById('module-notes-9').style.display = 'none';
+    
+        document.getElementById('module-notes-10').style.display = 'none';
+    
+        document.getElementById('module-notes-11').style.display = 'none';
+    
     startQuiz(); // Trigger the quiz start based on the selected module
 }
 
@@ -818,7 +841,7 @@ function startQuiz() {
         alert('Please select a valid module.');
         return;
     }
-    document.getElementById('about-section').style.display = 'none';
+    
     quizSection.style.display = 'block';
     document.getElementById('module-selection').style.display = 'none';
     quizDisplay.style.display = 'block';
