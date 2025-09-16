@@ -99,6 +99,7 @@ function showQuiz(moduleNum) {
         document.getElementById('module-notes-10').style.display = 'none';
     
         document.getElementById('module-notes-11').style.display = 'none';
+        document.getElementById('final-test-section').style.display = 'none';
     
     startQuiz(); // Trigger the quiz start based on the selected module
 }
